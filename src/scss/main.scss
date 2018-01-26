@@ -1,0 +1,36 @@
+// settings
+@import "settings/settings.color";
+@import "settings/settings.fonts";
+@import "settings/settings.global";
+
+//tools
+@import "tools/tools.mixins";
+
+// generics
+@import "generic/generic.reset";
+@import "generic/generic.box-sizing";
+
+// elements
+@import "elements/elements.forms.scss";
+@import "elements/elements.headings.scss";
+@import "elements/elements.images.scss";
+@import "elements/elements.links.scss";
+@import "elements/elements.lists.scss";
+@import "elements/elements.page.scss";
+
+// objects
+@import "objects/objects.buttons";
+@import "objects/objects.radio";
+@import "objects/objects.input";
+@import "objects/objects.select";
+@import "objects/objects.ratings";
+@import "objects/objects.image";
+@import "objects/objects.wrapper";
+@import "objects/objects.circle";
+@import "objects/objects.image";
+
+// components
+@import "components/components.container";
+@import "components/components.buttons";
+
+//utilities
