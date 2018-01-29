@@ -1,0 +1,25 @@
+/* NAVIGATION */
+
+.c-navigation{
+	display: inline-block;
+	width: 50%;
+}
+.c-navigation__wrapper{
+	list-style-type: none;
+}
+
+.o-navigation__listNav{
+	display: inline-block;
+}
+
+.o-navigation__link{
+	padding: $padding-xs $padding-m;
+	color: $grey-main-color;
+	font-weight: 600;
+	&:hover{
+		border-radius: $border-radius-m;
+		background: $green-main-color;
+		color: $white-main-color;
+		transition: background ease 300ms, color ease 300ms;
+	}
+}

@@ -9,9 +9,8 @@ var extractPlugin = new ExtractTextPlugin({ // assign plugin to this var
 });
 
 module.exports = {
-    entry:{
-      app: './src/js/app.js', //entry point/ first load
-    },
+    entry:'./src/js/app.js', //entry point/ first load
+    
     output:{
       path: path.resolve(__dirname, 'dist'), //'__dirname = current/absolute directory', 'directory so save the compiled js'
       filename: 'bundle.js', //'file to create', end result 
@@ -82,32 +81,33 @@ module.exports = {
         filename: 'index.html', //
         template: 'src/index.html' //tells webpack to use the index.html inside src folder as the template
       }),
-      new HtmlWebpackPlugin({
+      /*new HtmlWebpackPlugin({
+        title: 'Template 01', //
+        header: 'HEADER TO',
+        template: 'src/template.ejs', //
+        files: {
+          css: [ "main.css" ],
+          js: [ "src/app.js"],
+        }
+      }),*/
+      /*new HtmlWebpackPlugin({
         title: 'main template', //
         template: 'src/template.html', //tells webpack to use the index.html inside src folder as the template
         files: {
           css: [ "main.css" ],
           js: [ "src/app.js"],
           chunks: {
-           /* head: {
+            head: {
               entry: "assets/head_bundle.js",
               css: [ "main.css" ]
-            },*/
-            /*main: {
+            },
+            main: {
               entry: "assets/main_bundle.js",
               css: []
-            },*/
+            },
           }
         }
-
-      }),
-      new CleanWebpackPlugin(['dist']),// use plugin to clean every folder inserted inside the array
-      /*new HtmlWebpackPlugin({ //sets a new html page template
-        filename: 'component_nav.html',
-        template: 'src/components/component_nav.html', 
-        chunks:['app']
       }),*/
-      
-
+      new CleanWebpackPlugin(['dist']),// use plugin to clean every folder inserted inside the array 
     ]
 };
