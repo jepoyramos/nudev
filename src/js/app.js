@@ -7,4 +7,6 @@ import '../scss/main.scss'; //import main scss file
 /*Components*/
 import '../components/component_nav.html'; 
 
+
+
 /*import template from '../components/component_nav.html';*/

@@ -1,3 +1,5 @@
+/* @import "~susy/sass/susy"; */ //susy 
+
 // settings
 @import "settings/settings.color";
 @import "settings/settings.fonts";
@@ -32,7 +34,9 @@
 // components
 @import "components/components.container";
 @import "components/components.buttons";
+@import "components/components.header";
 @import "components/components.logo";
 @import "components/components.navigation";
+@import "components/components.headerFunctions";
 
 //utilities

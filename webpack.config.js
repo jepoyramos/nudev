@@ -33,6 +33,7 @@ module.exports = {
           test: /\.scss$/, // test load all scss file extension
           use: extractPlugin.extract({ //use extract method from extractplugin
             use:[
+              /*'style-loader',*/ // 'third load', 'for susy' 
               'css-loader', //'second load', 'handles css via javascript(when importing css file to app.js file)'
               'sass-loader' //'first load ', 'compile scss/sass to css'
             ]
