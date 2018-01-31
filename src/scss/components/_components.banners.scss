@@ -1,0 +1,20 @@
+/* BANNERS */
+
+.c-sliderBanner{
+	height: 450px;
+	/* overflow: hidden; */
+}
+
+.c-slide{
+	position: relative;
+	text-align: center;
+}
+
+.o-slide__content{
+	position: absolute;
+	margin: 12% auto;
+	left: 0;
+	right: 0;
+	color: $white-main-color;
+	text-transform: uppercase;
+}

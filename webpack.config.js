@@ -3,7 +3,6 @@ var webpack = require('webpack');
 var ExtractTextPlugin = require('extract-text-webpack-plugin'); //get this plugin installed using npm
 var HtmlWebpackPlugin = require('html-webpack-plugin'); // import html webpack plugin and assign it to this variable
 var CleanWebpackPlugin = require('clean-webpack-plugin'); // import plugin
-
 var extractPlugin = new ExtractTextPlugin({ // assign plugin to this var
   filename: 'main.css' //tell which file or what file name should be used/created in compiling scss files
 });
@@ -67,6 +66,10 @@ module.exports = {
               }
             }
           ]
+        },
+        {
+          test: /\.svg$/,
+          loader: 'svg-inline-loader?classPrefix'
         }
 
       ]
