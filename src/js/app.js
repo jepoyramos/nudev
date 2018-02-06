@@ -1,14 +1,29 @@
 import 'jquery'; //import jquery package
 import '../scss/main.scss'; //import main scss file
+import bannerSlider from './bannerSlider'; //import class from js file
 
-/*import {jsMethod } from './jsfilepath';*/
+class App {
 
-import arrow_right from '../img/arrow_right.svg';
+   constructor() {
+       this.components = [];
+   }
 
+   component(component) {
+       this.components.push(component);
+   }
 
-/*Components*/
-import '../components/component_nav.html'; 
+   boot() {
+       this.bindComponents();
+   }
 
+   bindComponents() {
+       this.components.forEach((component) => component.init());
+   }
+}
 
+const app = new App();
+app.component(new bannerSlider);
+// app.component(new Buttons);
+// app.component(new imageClicked);
 
-/*import template from '../components/component_nav.html';*/
+document.addEventListener("DOMContentLoaded", (e) => app.boot());

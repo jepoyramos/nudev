@@ -47,7 +47,7 @@
 			
 		</header>
 		
-		<div class="c-sliderBanner">
+		<div class="c-sliderBanner" id="">
 			<div class="c-slide">
 				<div class="o-slide__content">
 					<h1>Slide 01</h1>
@@ -68,16 +68,11 @@
 				<div class="o-pagination__button"></div>
 			</div>
 			<div class="c-bannerNav">
-				<div class="o-sliderNav__button o-sliderNav__button--left">
-					<img src="img/arrow_left.svg" alt="">
-
-					<svg>
-					  <use xlink:href="#arrow_left"></use>
-					</svg>
+				<div class="o-sliderNav__button o-sliderNav__button--left" id="js-prev">
+					<img src="img/arrow_left.png" alt="">
 				</div>
-				<div class="o-sliderNav__button o-sliderNav__button--right">
-					<!-- <img src="img/arrow_right.svg" alt=""> -->
-					<IconSVG src={require('img/arrow_right.svg')} />
+				<div class="o-sliderNav__button o-sliderNav__button--right" id="js-next">
+					<img src="img/arrow_right.png" alt="">
 				</div>
 			</div>
 		</div>
