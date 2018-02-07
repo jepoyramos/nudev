@@ -34,29 +34,40 @@ function showSlides(n) {
 export default class bannerSlider{
   
   constructor(){
-    let slideIndex = 1;
-    this.trigger = document.getElementById("js-prev");
-    this.trigger = document.getElementById("js-next");
-    console.log(slideIndex);
+    this.activeSlide = document.getElementsByClassName('c-slide--active');
+    this.activeSlide2 = document.querySelectorAll("div.c-slide--active");
+    this.prev = document.getElementById('js-prev');
+    this.next = document.getElementById('js-next');
+    console.log(this.activeSlide);
+    console.log(this.activeSlide2);
   }
 
   init(){
     this.bindMethod();
   }
 
-  prev() {
-   /* showSlides(slideIndex += n);*/
-   console.log('previous')
+  slidePrev() {
+    this.activeSlide.classList.remove('c-slide--active');
+    // console.log(this.activeSlide[0]);
+    // this.activeSlide.previousSibling.classList.add('c-slide--active');
+    // let count = this.activeSlide.length;
+    // console.log('previous')
   }
 
-  next() {
-   /* showSlides(slideIndex += n);*/
+  slideNext() {
+    this.activeSlide.classList.remove('c-slide--active');
+    this.activeSlide.nextSibling.classList.add('c-slide--active');
    console.log('next')
   }
 
-  bindMethod(){
-    this.trigger.addEventListener('click', this.prev.bind(this));
-    this.trigger.addEventListener('click', this.next.bind(this));
+  slideActive(){
+    /*return slides.length;*/
+    console.log(slides.length);
+  }
+
+  bindMethod(){// binds a method to an element and set it for an event
+    this.prev.addEventListener('click', this.slidePrev.bind(this));
+    this.next.addEventListener('click', this.slideNext.bind(this));
   }
 
 

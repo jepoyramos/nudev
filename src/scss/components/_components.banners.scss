@@ -8,6 +8,11 @@
 .c-slide{
 	position: relative;
 	text-align: center;
+	display: none;
+}
+
+.c-slide--active{
+	display: block;
 }
 
 .o-slide__content{
@@ -17,4 +22,24 @@
 	right: 0;
 	color: $white-main-color;
 	text-transform: uppercase;
+}
+
+.o-sliderNav__button{
+	display: inline-block;
+	width: 49%;
+	&:hover{
+		cursor: pointer;
+	}
+}
+
+.c-bannerNav{
+	text-align: center;
+}
+
+.o-sliderNav__button--left{
+	text-align: left;
+}
+
+.o-sliderNav__button--right{
+	text-align: right;
 }
